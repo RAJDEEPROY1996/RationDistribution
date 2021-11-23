@@ -1,0 +1,723 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "StateName",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "BeneficiaryEthAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "BeneficiaryName",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "BeneficiaryAddress",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "BeneficiaryPovertyLine",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "BeneficiaryIdentityProofName",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "BeneficiaryIdentityProofNo",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "Validity",
+						"type": "uint256"
+					}
+				],
+				"name": "BeneficiaryRegistration",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "Name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "BelowPovertyPrice",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "AbovePovertyPrice",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "Weight",
+						"type": "uint256"
+					}
+				],
+				"name": "Items",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "RationShopEthAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "BeneficiaryEthAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "ItemName",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "ItemPrice",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "ItemWeight",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "DeliveryTime",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "ReceiptNo",
+						"type": "uint256"
+					}
+				],
+				"name": "RationDelivery",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "StateName",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "RationShopEthAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "RationShopOwner",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "RationShopAddress",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "valid",
+						"type": "uint256"
+					}
+				],
+				"name": "RationShopRegistration",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "state_government",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "state_name",
+						"type": "string"
+					}
+				],
+				"name": "State_Government_Details",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "ip_item_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ip_below_poverty_line_price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ip_above_poverty_line_price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ip_weight_of_item",
+						"type": "uint256"
+					}
+				],
+				"name": "Add_Item",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "ip_Ethereum_address_of_Ration_shop",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "ip_Item_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ip_weight",
+						"type": "uint256"
+					}
+				],
+				"name": "Add_Item_In_Ration_Shop",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "ip_Ethereum_address_of_individual",
+						"type": "address"
+					}
+				],
+				"name": "Cancellation_of_Individual_Citizen",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "ip_Ethereum_address_of_Ration_shop",
+						"type": "address"
+					}
+				],
+				"name": "Cancellation_of_Ration_shop",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "Delete_Ration_Details",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "ip_item_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ip_above_poverty_line_price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ip_below_poverty_line_price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ip_weight_of_item",
+						"type": "uint256"
+					}
+				],
+				"name": "Edit_Add_Item_details",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "GoodsList",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "Load_by_state_name",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "Ethereum_address_of_Ration_shop",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "item_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "weight",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "ListItem",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "item_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "below_poverty_line_price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "above_poverty_line_price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "weight_of_item",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "Ration_delivery",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "Ethereum_address_of_Ration_shop",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "Ethereum_address_of_individual",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "Item_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "weight",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "time_of_delivery",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ReceiptNo",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "ip_Ethereum_address_of_individual",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "ip_Item_name",
+						"type": "string"
+					}
+				],
+				"name": "Ration_distribution_to_Public",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "ip_state_government",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "ip_state_name",
+						"type": "string"
+					}
+				],
+				"name": "Registration_Of_State_Government",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "ip_Ethereum_address_of_individual",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "ip_individual_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "ip_address_of_individual",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ip_poverty_line",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "ip_identity_proof_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "ip_identity_proof",
+						"type": "string"
+					}
+				],
+				"name": "Registration_of_Individual_citizen",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "ip_Ethereum_address_of_Ration_shop",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "ip_ration_dealer_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "ip_ration_dealer_address",
+						"type": "string"
+					}
+				],
+				"name": "Registration_of_Ration_Shop",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "citizen",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "register_by_state_government",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "Ethereum_address_of_individual",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "individual_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "address_of_individual",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "poverty_line",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "identity_proof_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "identity_proof",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "valid",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "getDay",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "shop",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "register_by_state_government",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "Ethereum_address_of_Ration_shop",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "ration_dealer_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "ration_dealer_address",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "valid",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "state_gov",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "state_government",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "state_name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Ration_distribution.sol": "Ration_distribution"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Ration_distribution.sol": {
+			"keccak256": "0xd24396c0ec9baf6215ea72d287af0cb9090e2f39104ea9107fbf6559e5e27204",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://26114c732884e0112ca631f4de8f1d4e56451181d09352499109345aad3afb7b",
+				"dweb:/ipfs/QmfDLYw7jTxsFEhr1pd4asEjp9MrmQPEmn3ZcaTUZ4dXUB"
+			]
+		}
+	},
+	"version": 1
+}

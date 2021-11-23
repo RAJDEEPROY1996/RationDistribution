@@ -1,0 +1,65 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "getDay",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Ration_distribution.sol": "DateTime"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Ration_distribution.sol": {
+			"keccak256": "0xd24396c0ec9baf6215ea72d287af0cb9090e2f39104ea9107fbf6559e5e27204",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://26114c732884e0112ca631f4de8f1d4e56451181d09352499109345aad3afb7b",
+				"dweb:/ipfs/QmfDLYw7jTxsFEhr1pd4asEjp9MrmQPEmn3ZcaTUZ4dXUB"
+			]
+		}
+	},
+	"version": 1
+}
