@@ -9,3 +9,4 @@ State Government will register the ration delivery shop with Ethereum address, n
 State Government will deliver items to the ration shop.
 Ration shop will sell items to the registered user
 On 1st of every month no ration shop is open.
+Submitted for verification at BscScan.com on 2021-11-23 Contract address is 0x21C443bafe3dadD487BD01DB6820D3F08CcF59AE
